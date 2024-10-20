@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3StalSat</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style for the container holding the iframe */
+        .model {
+            position: relative; /* Set position to relative for the overlay */
+            width: 100%; 
+            height: 700px; /* Set height for the iframe */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Style for the iframe */
+        #model {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove border */
+        }
+
+        /* Overlay style */
+        .overlay {
+            position: absolute; /* Position absolutely within the parent */
+            top: 0; /* Adjust this value based on the button's vertical position */
+            left: 0; /* Align to the left */
+            width: 100%; /* Cover full width of the iframe */
+            height: 60px; /* Set this to the height of the button */
+            background-color: rgba(255, 255, 255);
+            z-index: 10; /* Ensure it sits above the iframe */
+            pointer-events: auto; /* Allow clicks on the overlay */
+        }
+    </style>
 </head>
 <body>
     <div style="display: flex; justify-content: center;">
@@ -60,34 +88,9 @@
         <hr>
         <h2>3D Model</h2>
         <div class="model">
-            <iframe id="model" src="https://collaborate.shapr3d.com/v/eftN2uErJzQ9D0iVmpPXy" title="3StalSat Crystalization Model" width="100%" height="700" frameborder="0" allow="web-share; xr-spatial-tracking" loading="lazy" scrolling="no" referrerpolicy="origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe id="model" src="https://collaborate.shapr3d.com/v/eftN2uErJzQ9D0iVmpPXy" title="3StalSat Crystalization Model" allow="web-share; xr-spatial-tracking" loading="lazy" scrolling="no" referrerpolicy="origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="overlay"></div> <!-- Overlay div -->
         </div>
     </div>
-    <script>
-        function deleteFirstChildOfRoot() {
-            // Get the root element by ID
-            const rootElement = document.getElementById('root');
-
-            // Check if the root element and its first child exist
-            if (rootElement && rootElement.firstChild) {
-                // Get the first child of the first child
-                const firstChild = rootElement.firstChild.firstChild;
-
-                // If the first child exists, remove it
-                if (firstChild) {
-                    firstChild.parentNode.removeChild(firstChild);
-                    console.log("Deleted first child of the first child of root.");
-                } else {
-                    console.log("No first child found.");
-                }
-            } else {
-                console.log("Root element or its first child not found.");
-            }
-        }
-
-        // Get the iframe element and add the load event listener
-        const iframe = document.getElementById('model');
-        iframe.addEventListener('load', deleteFirstChildOfRoot);
-    </script>
 </body>
 </html>
