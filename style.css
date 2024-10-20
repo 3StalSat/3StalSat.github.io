@@ -45,3 +45,8 @@ a:hover {
 hr {
     margin: 70px 3px;
 }
+.model {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+}
