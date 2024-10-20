@@ -7,28 +7,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="display: flex; justify-content: center;"><img src="logo.png" style="background-color: black; width: 100px; height: 100px; border-radius: 10px;"></div>
+    <div style="display: flex; justify-content: center;">
+        <img src="logo.png" style="background-color: black; width: 100px; height: 100px; border-radius: 10px;">
+    </div>
     <div class="container">
         <h2>About Us</h2>
         <p>Our project, 3StalSat, is dedicated to studying the differences in crystal growth between Earth and microgravity conditions. By launching a CanSat to simulate near-space environments, we aim to uncover how low gravity impacts the structure and development of crystals.</p>
         <hr>
         <h2>Our Social Media</h2>
         <div class="sm">
-            <div class="smEntry"><a href="https://www.tiktok.com/@3stalsat" class="smEntry"><img class="smLogo" src="https://static.vecteezy.com/system/resources/previews/023/986/561/non_2x/tiktok-logo-tiktok-logo-transparent-tiktok-icon-transparent-free-free-png.png"><p>Tiktok</p></a></div>
-            <div class="smEntry"><a href="https://www.instagram.com/3stalsat/" class="smEntry"><img class="smLogo" style="width: 40px; height: 40px; margin: 7px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"><p>Instagram</p></a></div>
-            <div class="smEntry"><a href="https://www.youtube.com/channel/UCwla7fNxXdv1EY_Lu7N2G9w" class="smEntry"><img class="smLogo" style="width: 53px; height: 40px; margin: 7px;" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"><p>Youtube</p></a></div>
+            <div class="smEntry">
+                <a href="https://www.tiktok.com/@3stalsat" class="smEntry">
+                    <img class="smLogo" src="https://static.vecteezy.com/system/resources/previews/023/986/561/non_2x/tiktok-logo-tiktok-logo-transparent-tiktok-icon-transparent-free-free-png.png">
+                    <p>Tiktok</p>
+                </a>
+            </div>
+            <div class="smEntry">
+                <a href="https://www.instagram.com/3stalsat/" class="smEntry">
+                    <img class="smLogo" style="width: 40px; height: 40px; margin: 7px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+                    <p>Instagram</p>
+                </a>
+            </div>
+            <div class="smEntry">
+                <a href="https://www.youtube.com/channel/UCwla7fNxXdv1EY_Lu7N2G9w" class="smEntry">
+                    <img class="smLogo" style="width: 53px; height: 40px; margin: 7px;" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png">
+                    <p>Youtube</p>
+                </a>
+            </div>
         </div>
         <hr>
         <h2>Our Progress</h2>
         <p>Our progress at 3StalSat has focused on designing and developing a CanSat to investigate the effects of microgravity on crystal growth. We are now planning our mission to launch the CanSat into near-space, where it will simulate low-gravity conditions for the experiment.</p>
-        <hr>    
+        <hr>
         <h2>Applications For Our Missions Experiment</h2>
         <p>We believe that crystals formed in microgravity have a better crystalline structure, which can significantly enhance their applications in medicine and electronics. In microgravity, the absence of gravitational forces allows for more uniform crystal growth, resulting in fewer defects and impurities. This leads to clearer and more precise crystals that can improve the efficacy of pharmaceutical compounds, ensuring better drug delivery and stability. In electronics, high-quality crystals are essential for the development of more efficient semiconductors and photonic devices, enabling faster and more reliable performance. The refined crystalline structure enhances conductivity and minimizes energy loss, paving the way for advancements in technology and medical therapies. As we explore these potential applications, the unique environment of space presents exciting opportunities for innovation in both fields.</p>
         <hr>
         <h2>Contact</h2>
         <div class="sm">
-            <div class="smEntry"><a href="mailto:lo3.explorer@gmail.com" class="smEntry"><img class="smLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" style="margin-right: 10px; width: 43px; height: 40px;"><p>Email us</p></a></div>
-            <div class="smEntry"><a href="https://www.instagram.com/3stalsat/" class="smEntry"><img class="smLogo" style="width: 40px; height: 40px; margin: 7px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"><p>DM us on Instagram</p></a></div>
+            <div class="smEntry">
+                <a href="mailto:lo3.explorer@gmail.com" class="smEntry">
+                    <img class="smLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png" style="margin-right: 10px; width: 43px; height: 40px;">
+                    <p>Email us</p>
+                </a>
+            </div>
+            <div class="smEntry">
+                <a href="https://www.instagram.com/3stalsat/" class="smEntry">
+                    <img class="smLogo" style="width: 40px; height: 40px; margin: 7px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+                    <p>DM us on Instagram</p>
+                </a>
+            </div>
         </div>
         <hr>
         <h2>3D Model</h2>
@@ -37,14 +64,30 @@
         </div>
     </div>
     <script>
-        function deleteButton() {
-            const elements = document.getElementsByClassName('Button-module_button__2ZuB7');
-            for (let i = elements.length - 1; i >= 0; i--) {
-                elements[i].parentNode.removeChild(elements[i]);
-            } //F**k you shapr3d!
-            console.log("test");
+        function deleteFirstChildOfRoot() {
+            // Get the root element by ID
+            const rootElement = document.getElementById('root');
+
+            // Check if the root element and its first child exist
+            if (rootElement && rootElement.firstChild) {
+                // Get the first child of the first child
+                const firstChild = rootElement.firstChild.firstChild;
+
+                // If the first child exists, remove it
+                if (firstChild) {
+                    firstChild.parentNode.removeChild(firstChild);
+                    console.log("Deleted first child of the first child of root.");
+                } else {
+                    console.log("No first child found.");
+                }
+            } else {
+                console.log("Root element or its first child not found.");
+            }
         }
-        document.getElementById('model').addEventListener('load', deleteButton);
+
+        // Get the iframe element and add the load event listener
+        const iframe = document.getElementById('model');
+        iframe.addEventListener('load', deleteFirstChildOfRoot);
     </script>
 </body>
 </html>
